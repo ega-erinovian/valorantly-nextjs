@@ -13,9 +13,46 @@
 
 body {
   background-color: #ece8e1;
+  overflow-x: hidden;
 }
 
 p,
 a {
   letter-spacing: 1.5px;
+}
+
+/* ABOUT SECTION */
+.gameplay-vid::before {
+  content: "GAMEPLAY";
+  position: absolute;
+  width: fit-content;
+  background-color: #ff4655;
+  color: #ece8e1;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+  padding: 0.5rem 1rem;
+  top: 4rem;
+  left: 0;
+  z-index: 10;
+}
+
+.gameplay-vid::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 10px;
+  background-color: #ff4655;
+  color: #ece8e1;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+  bottom: 1.5rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+@media screen and (max-width: 680px) {
+  .gameplay-vid::before {
+    font-size: 0.5rem;
+    padding: 0.5rem 0.5rem;
+  }
 }
