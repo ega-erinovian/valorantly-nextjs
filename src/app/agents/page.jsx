@@ -2,38 +2,33 @@
 
 import Image from "next/image";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useRef } from "react";
 
 export default function Page() {
-  const imageRef = useRef();
-  const scrollYProgressImage = useScroll({ target: imageRef }).scrollYProgress;
-  const scaleImg = useSpring(scrollYProgressImage, {
-    stiffness: 125,
-    mass: 0.25,
+  let { scrollYProgress } = useScroll();
+  const scaleImg = useSpring(scrollYProgress, {
+    stiffness: 50,
+    mass: 0.3,
   });
-  const y1 = useTransform(scaleImg, [0, 2], [-60, 60]);
-
-  const textRef = useRef();
-  const scrollYProgressText = useScroll({ target: textRef }).scrollYProgress;
-  const scaleText = useSpring(scrollYProgressText, {
-    stiffness: 125,
-    mass: 0.25,
+  const scaleText = useSpring(scrollYProgress, {
+    stiffness: 50,
+    mass: 0.4,
   });
-  const y2 = useTransform(scaleText, [0, 1], [-150, 150]);
+  let yImg = useTransform(scaleImg, [0, 1], ["20%", "0%"]);
+  let yText = useTransform(scaleText, [0, 1], ["40%", "0%"]);
 
   return (
-    <div className="h-full overflow-x-hidden">
+    <div className="h-[300vh] overflow-x-hidden">
       <header
-        className="h-[75vh] w-full bg-slate-600 relative lg:flex lg:justify-end items-center px-40 mb-40"
+        className="h-[605px] w-full bg-slate-600 relative lg:flex lg:justify-end items-center px-40 mb-20 bg-center bg-cover"
         style={{
           backgroundImage:
             "url(https://playvalorant.com/assets/images/agents-background.jpg)",
         }}
       >
         <motion.div
-          className="absolute h-full w-[170vw] flex justify-center lg:w-screen top-36 left-[-35vw] lg:left-0"
-          ref={imageRef}
-          style={{ y: y1 }}
+          className="absolute h-full w-[680px] flex justify-center lg:w-screen left-[-35%] lg:left-0"
+          // ref={imageRef}
+          style={{ y: yImg }}
         >
           <Image
             unoptimized
@@ -45,9 +40,9 @@ export default function Page() {
           />
         </motion.div>
         <motion.div
-          className="hidden lg:block w-full lg:w-1/4 text-color-white lg:mt-10 border-b-2 pb-16"
-          ref={textRef}
-          style={{ y: y2 }}
+          className="hidden lg:block w-full lg:w-1/4 text-color-white border-b-2 pb-16"
+          // ref={textRef}
+          style={{ y: yText }}
         >
           <p className="font-bold text-md mb-2">Find The Headcount</p>
           <p>

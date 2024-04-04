@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const links = [
   { url: "/", title: "Home" },
-  { url: "/#", title: "Agents" },
+  { url: "/agents", title: "Agents" },
   { url: "/#", title: "Maps" },
   { url: "/#", title: "Weapons" },
 ];

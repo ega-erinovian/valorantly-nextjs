@@ -13,7 +13,7 @@
 
 body {
   background-color: #ece8e1;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 p,
