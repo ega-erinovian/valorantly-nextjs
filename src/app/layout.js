@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Ropa_Sans } from "next/font/google";
+import Footer from "@/components/Footer";
+import DownloadBtn from "@/components/DownloadBtn";
 
 const ropaSans = Ropa_Sans({ subsets: ["latin"], weight: "400" });
 
@@ -15,6 +17,8 @@ export default function RootLayout({ children }) {
       <body className={ropaSans.className}>
         <Navbar />
         {children}
+        <DownloadBtn />
+        <Footer />
       </body>
     </html>
   );

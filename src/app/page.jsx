@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import Link from "next/link";
 import { Oswald } from "next/font/google";
+import HomeContent from "@/components/HomeContent";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
 export default function Home() {
+  // Parallax Animation
   let { scrollYProgress } = useScroll();
   const scaleText = useSpring(scrollYProgress, {
     stiffness: 50,
@@ -15,6 +16,26 @@ export default function Home() {
   });
   let y = useTransform(scaleText, [0, 1], ["30%", "5%"]);
   let yWar = useTransform(scaleText, [0, 1], ["0%", "50%"]);
+
+  // Home Content Data
+  const homeContent = [
+    {
+      title: "agents",
+      subtitle: "CREATIVITY IS YOUR BEST WEAPON",
+      description:
+        "Lebih dari sekadar senjata dan peluru, kamu akan memilih Agen bersenjatakan kemampuan yang adaptif, tangkas, dan mematikan untuk membuktikan keahlian menembakmu. Sejalan dengan berbedanya kepiawaian dalam menembak, begitu pula di sini; tak akan ada Agen dengan karakteristik sama.",
+      textColor: "text-color-white",
+      hoverColor: "bg-color-secondary",
+    },
+    {
+      title: "maps",
+      subtitle: "BERTEMPUR DI SELURUH BELAHAN DUNIA",
+      description:
+        "Tiap peta adalah panggung tersendiri untuk memamerkan kemampuan berpikir kreatifmu. Semua dirancang sesuai untuk strategi tim, laga spektakuler, dan momen sengit. Perlihatkan kepiawaian yang akan ditiru oleh pemain lain sampai bertahun-tahun mendatang.",
+      textColor: "text-color-secondary",
+      hoverColor: "bg-color-primary",
+    },
+  ];
   return (
     <div className="h-full w-screen">
       <header
@@ -55,7 +76,7 @@ export default function Home() {
             <h3 className={`${oswald.className} font-black text-2xl mb-4`}>
               DEFY THE LIMITS
             </h3>
-            <p className="">
+            <p>
               Padukan gaya dan pengalamanmu di panggung kompetitif global. Kamu
               memiliki 13 ronde untuk menyerang dan mempertahankan sisimu dengan
               keahlian tembak-menembak sengit serta kemampuan taktis. Dengan
@@ -88,7 +109,7 @@ export default function Home() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_606_85)">
+          <g clipPath="url(#clip0_606_85)">
             <path d="M-0.5 77.5V-0.5L129.5 77.5H-0.5Z" fill="#FF4655" />
           </g>
           <defs>
@@ -112,31 +133,18 @@ export default function Home() {
             />
           </motion.div>
           <div className="lg:w-1/2 h-full flex flex-col lg:justify-center p-8 z-10">
-            <h1
-              className={`${oswald.className} font-black text-8xl md:text-9xl mb-10 lg:mb-12 `}
-            >
-              AGENT
-            </h1>
-            <h3 className={`${oswald.className} font-black text-2xl mb-4`}>
-              CREATIVITY IS YOUR BEST WEAPON
-            </h3>
-            <p className="lg:w-[80%]">
-              Lebih dari sekadar senjata dan peluru, kamu akan memilih Agen
-              bersenjatakan kemampuan yang adaptif, tangkas, dan mematikan untuk
-              membuktikan keahlian menembakmu. Sejalan dengan berbedanya
-              kepiawaian dalam menembak, begitu pula di sini; tak akan ada Agen
-              dengan karakteristik sama.
-            </p>
-            <Link href="/agents">
-              <button className="w-full lg:w-1/2 h-fit bg-color-white hover:bg-color-secondary text-color-secondary hover:text-color-white mt-6 lg:mt-12 py-4 font-bold text-lg lg:text-xl border-2 border-color-secondary">
-                See All Agent
-              </button>
-            </Link>
+            <HomeContent
+              title={homeContent[0].title}
+              subtitle={homeContent[0].subtitle}
+              description={homeContent[0].description}
+              textColor={homeContent[0].textColor}
+              hoverColor={homeContent[0].hoverColor}
+            />
           </div>
         </div>
       </div>
       {/* MAPS */}
-      <div className="w-screen h-full text-color-white overflow-hidden relative pt-20 lg:pb-20">
+      <div className="w-screen h-full text-color-white overflow-hidden relative pt-20 lg:pb-48 lg:pt-10">
         {/* BACKGROUND TEXT */}
         <motion.h1
           className="font-black text-[270px] absolute top-[-15rem] right-36 hidden lg:block drop-shadow-[0_0_2px_rgba(0,0,0,0.1)] -z-10"
@@ -145,26 +153,14 @@ export default function Home() {
           WARZONE
         </motion.h1>
         {/* CONTENT */}
-        <div className="lg:w-1/2 h-full flex flex-col lg:justify-center p-8 lg:ps-40 text-color-secondary z">
-          <h1
-            className={`${oswald.className} font-black text-8xl md:text-9xl mb-10 lg:mb-12 `}
-          >
-            MAPS
-          </h1>
-          <h3 className={`${oswald.className} font-black text-2xl mb-4`}>
-            BERTEMPUR DI SELURUH BELAHAN DUNIA
-          </h3>
-          <p className="lg:w-[80%]">
-            Tiap peta adalah panggung tersendiri untuk memamerkan kemampuan
-            berpikir kreatifmu. Semua dirancang sesuai untuk strategi tim, laga
-            spektakuler, dan momen sengit. Perlihatkan kepiawaian yang akan
-            ditiru oleh pemain lain sampai bertahun-tahun mendatang.
-          </p>
-          <Link href="/maps">
-            <button className="w-full lg:w-1/2 h-fit bg-color-white hover:bg-color-primary text-color-secondary hover:text-color-white mt-6 lg:mt-12 py-4 font-bold text-lg lg:text-xl border-2 border-color-secondary">
-              See All Maps
-            </button>
-          </Link>
+        <div className="lg:w-1/2 h-full flex flex-col lg:justify-center p-8 lg:ps-40 text-color-secondary">
+          <HomeContent
+            title={homeContent[1].title}
+            subtitle={homeContent[1].subtitle}
+            description={homeContent[1].description}
+            textColor={homeContent[1].textColor}
+            hoverColor={homeContent[1].hoverColor}
+          />
         </div>
         {/* MAP IMAGE */}
         <Image
