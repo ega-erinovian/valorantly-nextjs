@@ -26,7 +26,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full bg-color-secondary text-color-white flex flex-col items-center py-8 gap-8">
+    <div className="w-full bg-color-secondary text-color-white flex flex-col items-center py-8 pb-28 lg:pb-10 gap-12 lg:gap-8">
       {/* SOCIAL MEDIA */}
       <div className="flex justify-between items-center gap-4">
         {socialLink.map((item, index) => {
@@ -62,13 +62,13 @@ const Footer = () => {
         />
       </div>
       {/* COPYRIGHT RIOT */}
-      <p className="text-xs px-8 lg:px-0 lg:w-1/3 text-center font-[100]">
+      <p className="text-xs px-8 lg:px-0 md:w-1/2 lg:w-1/3 text-center font-[100]">
         © 2020-2024 Riot Games, Inc. RIOT GAMES, VALORANT dan semua logo terkait
         adalah merek dagang, merek layanan, dan/atau merek dagang terdaftar Riot
         Games, Inc.
       </p>
       {/* COPYRIGHT EGA */}
-      <p className="text-xs px-8 lg:px-0 lg:w-1/3 text-center font-[100]">
+      <p className="text-xs px-8 lg:px-0 md:w-1/2 lg:w-1/3 text-center font-[100]">
         © 2022 - 2024 Gaga, dev. Website Designed and Created by Gaga.dev
         inspired by{" "}
         <Link

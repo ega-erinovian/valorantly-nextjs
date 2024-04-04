@@ -15,7 +15,7 @@ export default function Home() {
     mass: 0.3,
   });
   let y = useTransform(scaleText, [0, 1], ["30%", "5%"]);
-  let yWar = useTransform(scaleText, [0, 1], ["0%", "50%"]);
+  let yWar = useTransform(scaleText, [0, 1], ["0%", "70%"]);
 
   // Home Content Data
   const homeContent = [
@@ -24,16 +24,12 @@ export default function Home() {
       subtitle: "CREATIVITY IS YOUR BEST WEAPON",
       description:
         "Lebih dari sekadar senjata dan peluru, kamu akan memilih Agen bersenjatakan kemampuan yang adaptif, tangkas, dan mematikan untuk membuktikan keahlian menembakmu. Sejalan dengan berbedanya kepiawaian dalam menembak, begitu pula di sini; tak akan ada Agen dengan karakteristik sama.",
-      textColor: "text-color-white",
-      hoverColor: "bg-color-secondary",
     },
     {
       title: "maps",
       subtitle: "BERTEMPUR DI SELURUH BELAHAN DUNIA",
       description:
         "Tiap peta adalah panggung tersendiri untuk memamerkan kemampuan berpikir kreatifmu. Semua dirancang sesuai untuk strategi tim, laga spektakuler, dan momen sengit. Perlihatkan kepiawaian yang akan ditiru oleh pemain lain sampai bertahun-tahun mendatang.",
-      textColor: "text-color-secondary",
-      hoverColor: "bg-color-primary",
     },
   ];
   return (
@@ -118,9 +114,15 @@ export default function Home() {
             </clipPath>
           </defs>
         </svg>
-        <div className="w-fit h-full lg:h-[80%] bg-color-primary lg:flex items-center justify-end relative">
+        <div className="w-fit h-full lg:h-[80%] bg-color-primary lg:flex items-center justify-end relative py-20 lg:py-0">
+          <motion.h1
+            className="font-black text-[270px] absolute top-[-10rem] left-5 hidden lg:block drop-shadow-[0_0_2px_#c43a45] text-color-primary"
+            style={{ y: yWar }}
+          >
+            RADIANT
+          </motion.h1>
           <motion.div
-            className="hidden lg:block absolute h-full w-fit lg:w-fit  left-[-35vw] lg:left-[7vw]"
+            className="hidden lg:block absolute h-full w-fit lg:w-fit left-[-35vw] lg:left-[7vw]"
             style={{ y }}
           >
             <Image
@@ -132,13 +134,11 @@ export default function Home() {
               className="h-full w-fit z-100"
             />
           </motion.div>
-          <div className="lg:w-1/2 h-full flex flex-col lg:justify-center p-8 z-10">
+          <div className="lg:w-1/2 h-full flex flex-col lg:justify-center p-8 md:p-16 lg:p-8 z-10">
             <HomeContent
               title={homeContent[0].title}
               subtitle={homeContent[0].subtitle}
               description={homeContent[0].description}
-              textColor={homeContent[0].textColor}
-              hoverColor={homeContent[0].hoverColor}
             />
           </div>
         </div>
@@ -150,16 +150,14 @@ export default function Home() {
           className="font-black text-[270px] absolute top-[-15rem] right-36 hidden lg:block drop-shadow-[0_0_2px_rgba(0,0,0,0.1)] -z-10"
           style={{ y: yWar }}
         >
-          WARZONE
+          KINGDOM
         </motion.h1>
         {/* CONTENT */}
-        <div className="lg:w-1/2 h-full flex flex-col lg:justify-center p-8 lg:ps-40 text-color-secondary">
+        <div className="lg:w-1/2 h-full flex flex-col lg:justify-center p-8 md:p-16 lg:p-8 lg:ps-40 text-color-secondary">
           <HomeContent
             title={homeContent[1].title}
             subtitle={homeContent[1].subtitle}
             description={homeContent[1].description}
-            textColor={homeContent[1].textColor}
-            hoverColor={homeContent[1].hoverColor}
           />
         </div>
         {/* MAP IMAGE */}
