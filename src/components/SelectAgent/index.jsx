@@ -11,9 +11,8 @@ import { Oswald } from "next/font/google";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
-const SelectAgent = () => {
+const SelectAgent = ({ link = "", agentName }) => {
   const [agents, setAgents] = useState([]);
-  let currentURL = usePathname().split("/");
 
   useEffect(() => {
     getAgent().then((data) => {
@@ -40,10 +39,10 @@ const SelectAgent = () => {
       </div>
       <div className="h-full w-full p-8 pt-0 lg:px-40 lg:pb-32 text-black mb-20 flex flex-col items-center relative">
         <motion.h1
-          className="text-color-white font-black text-[270px] absolute top-[-30rem] right-36 hidden lg:block drop-shadow-[0_0_2px_rgba(0,0,0,0.1)] -z-10"
+          className="text-color-white font-black text-[270px] absolute top-[-30rem] right-36 hidden lg:block drop-shadow-[0_0_2px_rgba(0,0,0,0.1)] -z-10 uppercase"
           style={{ y: yWar }}
         >
-          RADIANT
+          {agentName ? agentName : "VALORANT"}
         </motion.h1>
         <div className="w-fit grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-12 gap-0">
           {agents &&
@@ -51,14 +50,20 @@ const SelectAgent = () => {
               if (agent.isPlayableCharacter)
                 return (
                   <Link
-                    href={`/agent/${agent.uuid}`}
+                    href={`/agents/${agent.uuid}`}
                     key={i}
-                    className="border-2 border-stone-400 p-0 w-fit hover:bg-stone-300 transition-all"
+                    className={`border-2 border-stone-400 p-0 w-fit hover:bg-stone-300 transition-all ${
+                      link !== "" && agent.uuid === link
+                        ? "bg-stone-300 border-color-primary"
+                        : ""
+                    }`}
                   >
                     <Image
-                      className={`agent-img${
-                        agent.uuid === currentURL[4] ? "-selected" : ""
-                      }`}
+                      className={`${
+                        link !== "" && agent.uuid === link
+                          ? "brightness-50"
+                          : ""
+                      } `}
                       src={agent.displayIcon}
                       alt={agent.displayName}
                       key={i}
