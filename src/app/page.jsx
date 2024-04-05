@@ -57,7 +57,9 @@ export default function Home() {
       {/* ABOUT */}
       <div className="w-full h-full py-32 px-4 md:px-8 xl:py-40 xl:px-48">
         <div className="lg:flex lg:items-end lg:justify-between mb-4 lg:mb-20">
-          <h1 className={`${oswald.className} font-black text-7xl md:text-9xl`}>
+          <h1
+            className={`${oswald.className} font-black text-7xl md:text-9xl mb-10`}
+          >
             WE ARE VALORANT
           </h1>
           <div className="hidden lg:block w-[15%] text-sm text-end text-color-primary border-b-4 border-color-primary pb-4">
@@ -68,8 +70,10 @@ export default function Home() {
         {/* ABOUT - CONTENT */}
         <div className="w-full xl:flex justify-between gap-10">
           {/* TEXT CONTENT */}
-          <div className="xl:w-1/2">
-            <h3 className={`${oswald.className} font-black text-2xl mb-4`}>
+          <div className="xl:w-1/2 mb-4">
+            <h3
+              className={`${oswald.className} font-black text-2xl mb-4 uppercase`}
+            >
               DEFY THE LIMITS
             </h3>
             <p>

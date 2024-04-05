@@ -44,7 +44,7 @@ const SelectAgent = ({ link = "", agentName }) => {
         >
           {agentName ? agentName : "VALORANT"}
         </motion.h1>
-        <div className="w-fit grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-12 gap-0">
+        <div className="w-fit grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-12 gap-0 border-2 border-stone-400">
           {agents &&
             agents.map((agent, i) => {
               if (agent.isPlayableCharacter && agent !== null)
@@ -54,14 +54,14 @@ const SelectAgent = ({ link = "", agentName }) => {
                     key={i}
                     className={`border-2 border-stone-400 p-0 w-fit hover:bg-stone-300 transition-all ${
                       link !== "" && agent.uuid === link
-                        ? "bg-stone-300 border-color-primary"
+                        ? "bg-stone-300 border-color-primary cursor-default"
                         : ""
                     }`}
                   >
                     <Image
                       className={`${
                         link !== "" && agent.uuid === link
-                          ? "brightness-50"
+                          ? "brightness-[40%]"
                           : ""
                       } `}
                       src={agent.displayIcon}

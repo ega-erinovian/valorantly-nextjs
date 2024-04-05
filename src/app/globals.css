@@ -21,6 +21,27 @@ a {
   letter-spacing: 1.5px;
 }
 
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #284660;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1b2e3f;
+}
+
 /* ABOUT SECTION */
 .gameplay-vid::before {
   content: "GAMEPLAY";
@@ -81,6 +102,11 @@ a {
 
 @media screen and (max-width: 680px) {
   .gameplay-vid::before {
+    font-size: 0.5rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .agent-vid::before {
     font-size: 0.5rem;
     padding: 0.5rem 0.5rem;
   }

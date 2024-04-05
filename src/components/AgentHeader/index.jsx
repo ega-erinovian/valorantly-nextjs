@@ -101,6 +101,42 @@ const AgentHeader = ({
           </div>
         </motion.div>
       </header>
+      <div className="block lg:hidden w-full text-black p-8">
+        {agentName ? (
+          <>
+            <h3
+              className={`${oswald.className} font-bold text-6xl mb-5 uppercase`}
+            >
+              {agentName}
+            </h3>
+            <p className="font-bold text-md mb-2"># Biography</p>
+            <p className="mb-3 text-sm">{agentBio}</p>
+            <p className="font-bold text-md mb-2"># Role</p>
+            <div className="w-full flex items-center gap-4">
+              <Image
+                src={roleIcon}
+                width={30}
+                height={30}
+                alt="Role Icon"
+                className="w-fit h-fit brightness-0"
+              />
+              <h3
+                className={`${oswald.className} font-bold text-4xl uppercase`}
+              >
+                {agentRole}
+              </h3>
+            </div>
+          </>
+        ) : (
+          <>
+            <p className="font-bold mb-4">Find The Headcount</p>
+            <p>
+              Find more ways to plant the Spike and style on your enemies with
+              scrappers, strategists, and hunters of every description.
+            </p>
+          </>
+        )}
+      </div>
     </>
   );
 };

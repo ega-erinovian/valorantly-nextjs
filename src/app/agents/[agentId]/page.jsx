@@ -48,7 +48,8 @@ const AgentsDetail = ({ params }) => {
             agentBg={agents[agentIndex].background}
             agentColors={agents[agentIndex].backgroundGradientColors}
           />
-          <div className="w-full h-full py-32 px-4 md:px-8 xl:py-40 xl:px-48 relative">
+          {/* MOBILE AGENT DESCRIPTION */}
+          <div className="w-full h-full py-32 px-8 lg:px-4 md:px-8 xl:py-40 xl:px-48 relative">
             <motion.h1
               className="text-color-white font-black text-[270px] absolute top-[-10rem] left-0 hidden lg:block drop-shadow-[0_0_2px_rgba(0,0,0,0.1)] -z-10 uppercase leading-none text-end"
               style={{ y }}

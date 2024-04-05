@@ -30,15 +30,15 @@ const HomeContent = ({ title, subtitle, description }) => {
       <p className="lg:w-[80%]">{description}</p>
       <Link href={`/${title}`}>
         <button
-          className={`w-full lg:w-1/2 h-fit bg-color-white text-color-secondary hover:text-color-white mt-6 lg:mt-12 py-4 font-bold text-lg lg:text-xl border-2 border-color-secondary capitalize 
-             ${
-               title === "agents"
-                 ? "hover:bg-color-secondary"
-                 : "hover:bg-color-primary"
-             }
-          `}
+          className={`relative group px-8 h-14 before:absolute before:inset-0 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left mt-4 lg:mt-10  ${
+            title === "agents"
+              ? "text-color-secondary bg-color-white before:bg-color-secondary"
+              : "text-color-white bg-color-primary before:bg-color-secondary"
+          }  hover:text-color-white`}
         >
-          See All {title}
+          <span class="relative uppercase font-bold text-sm lg:text-md">
+            See All {title}
+          </span>
         </button>
       </Link>
     </>
