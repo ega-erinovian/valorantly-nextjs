@@ -7,7 +7,7 @@ import { Oswald } from "next/font/google";
 const oswald = Oswald({ subsets: ["latin"] });
 
 const AgentHeader = ({
-  bgImg,
+  bgImg = "",
   agentImg,
   agentName,
   agentBio,
@@ -33,7 +33,9 @@ const AgentHeader = ({
   return (
     <>
       <header
-        className="agent-page h-[605px] w-full bg-slate-600 relative flex flex-col lg:flex-row lg:justify-center items-center px-40 mb-20 bg-center bg-cover relative"
+        className={`h-[605px] w-full bg-color-secondary relative flex flex-col lg:flex-row lg:justify-center items-center px-40 mb-20 bg-center bg-cover ${
+          bgImg === "" && "agent-page"
+        }`}
         style={{
           backgroundImage: bgImg
             ? `url(${bgImg})`
@@ -41,7 +43,7 @@ const AgentHeader = ({
         }}
       >
         <div
-          className="absolute lg:left-10 h-full w-[65vh] lg:w-[40vw] bg-[length:100%] bg-center opacity-15 self-center"
+          className="absolute lg:left-10 h-full w-[572px] md:w-[600px] lg:w-[596px] bg-[length:100%] bg-center opacity-15"
           style={{ backgroundImage: `url(${agentBg})` }}
         ></div>
         <motion.div
@@ -54,7 +56,7 @@ const AgentHeader = ({
             width={1000}
             height={1000}
             alt="valorant-agents"
-            className="w-fit h-full"
+            className="w-fit h-full drop-shadow-[0_35px_35px_rgba(0,0,0,0.35)]"
           />
         </motion.div>
         <motion.div

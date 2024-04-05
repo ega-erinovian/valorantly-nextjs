@@ -47,7 +47,7 @@ const SelectAgent = ({ link = "", agentName }) => {
         <div className="w-fit grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-12 gap-0">
           {agents &&
             agents.map((agent, i) => {
-              if (agent.isPlayableCharacter)
+              if (agent.isPlayableCharacter && agent !== null)
                 return (
                   <Link
                     href={`/agents/${agent.uuid}`}

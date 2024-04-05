@@ -69,7 +69,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-full w-full flex items-center justify-between p-4 sm:p-8 lg:p-6 md:px-30 xl:px-40 text-lg bg-color-secondary text-color-white">
+    <div
+      className={`h-full w-full flex items-center justify-between p-4 sm:p-8 lg:p-6 md:px-30 xl:px-40 text-lg bg-color-secondary text-color-white ${
+        open ? "fixed z-50" : ""
+      }`}
+    >
       {/* LOGO */}
       <div className="lg:flex">
         <Link href="/">
@@ -124,7 +128,11 @@ const Navbar = () => {
                 className=""
                 key={link.title}
               >
-                <Link href={link.url} className="hover:text-color-primary">
+                <Link
+                  href={link.url}
+                  className="hover:text-color-primary"
+                  onClick={() => setOpen((prev) => !prev)}
+                >
                   {link.title}
                 </Link>
               </motion.div>

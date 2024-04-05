@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Oswald } from "next/font/google";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import SelectAgent from "@/components/SelectAgent";
+import AgentHeader from "@/components/AgentHeader";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
@@ -22,7 +23,11 @@ export default function Page() {
 
   return (
     <div className="h-full overflow-x-hidden">
-      <header
+      <AgentHeader
+        bgImg="https://playvalorant.com/assets/images/agents-background.jpg"
+        agentImg="https://playvalorant.com/static/agents-group-31d7ce5a3637e45d8b25d2fd03159e6c.png"
+      />
+      {/* <header
         className="h-[605px] w-full bg-slate-600 relative flex flex-col lg:flex-row lg:justify-center items-center px-40 mb-20 bg-center bg-cover"
         style={{
           backgroundImage:
@@ -55,7 +60,7 @@ export default function Page() {
             </p>
           </div>
         </motion.div>
-      </header>
+      </header> */}
       <div className="block lg:hidden w-full text-black p-8">
         <p className="font-bold mb-4">Find The Headcount</p>
         <p>

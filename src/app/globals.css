@@ -31,8 +31,8 @@ a {
   letter-spacing: 1.5px;
   font-weight: 900;
   padding: 0.5rem 1rem;
-  top: 4rem;
-  left: 0;
+  top: 1.5rem;
+  left: -1rem;
   z-index: 10;
 }
 
@@ -45,8 +45,37 @@ a {
   color: #ece8e1;
   letter-spacing: 1.5px;
   font-weight: 900;
+  bottom: -0.6rem;
+  right: 0;
+  z-index: 10;
+}
+
+/* AGENT PAGE */
+.agent-vid::before {
+  content: "GAMEPLAY";
+  position: absolute;
+  width: fit-content;
+  background-color: #ff4655;
+  color: #ece8e1;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+  padding: 0.5rem 1rem;
   bottom: 1.5rem;
-  right: 2rem;
+  left: -1rem;
+  z-index: 10;
+}
+
+.agent-vid::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 10px;
+  background-color: #ff4655;
+  color: #ece8e1;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+  bottom: -0.6rem;
+  right: 0;
   z-index: 10;
 }
 

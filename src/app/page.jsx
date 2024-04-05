@@ -23,13 +23,13 @@ export default function Home() {
       title: "agents",
       subtitle: "CREATIVITY IS YOUR BEST WEAPON",
       description:
-        "Lebih dari sekadar senjata dan peluru, kamu akan memilih Agen bersenjatakan kemampuan yang adaptif, tangkas, dan mematikan untuk membuktikan keahlian menembakmu. Sejalan dengan berbedanya kepiawaian dalam menembak, begitu pula di sini; tak akan ada Agen dengan karakteristik sama.",
+        "More than guns and bullets, you’ll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine. No two Agents play alike, just as no two highlight reels will look the same.",
     },
     {
       title: "maps",
-      subtitle: "BERTEMPUR DI SELURUH BELAHAN DUNIA",
+      subtitle: "FIGHT AROUND THE WORLD",
       description:
-        "Tiap peta adalah panggung tersendiri untuk memamerkan kemampuan berpikir kreatifmu. Semua dirancang sesuai untuk strategi tim, laga spektakuler, dan momen sengit. Perlihatkan kepiawaian yang akan ditiru oleh pemain lain sampai bertahun-tahun mendatang.",
+        "Each map is a playground to showcase your creative thinking. Purpose-built for team strategies, spectacular plays, and clutch moments. Make the play others will imitate for years to come.",
     },
   ];
   return (
@@ -43,7 +43,7 @@ export default function Home() {
       >
         <div className="xl:w-1/2">
           <p className="font-bold text-color-white text-xs md:text-sm lg:text-xl mb-4">
-            Game tembak-menembak taktis berbasis karakter 5v5
+            A 5v5 character-based tactical shooter
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,28 +61,28 @@ export default function Home() {
             WE ARE VALORANT
           </h1>
           <div className="hidden lg:block w-[15%] text-sm text-end text-color-primary border-b-4 border-color-primary pb-4">
-            <p>PR0T0K0L VLRT</p>
+            <p>VLRT PR0T0C0L</p>
             <p>MR0C - SWD - BR4</p>
           </div>
         </div>
         {/* ABOUT - CONTENT */}
         <div className="w-full xl:flex justify-between gap-10">
           {/* TEXT CONTENT */}
-          <div className="p-8 xl:w-1/2">
+          <div className="xl:w-1/2">
             <h3 className={`${oswald.className} font-black text-2xl mb-4`}>
               DEFY THE LIMITS
             </h3>
             <p>
-              Padukan gaya dan pengalamanmu di panggung kompetitif global. Kamu
-              memiliki 13 ronde untuk menyerang dan mempertahankan sisimu dengan
-              keahlian tembak-menembak sengit serta kemampuan taktis. Dengan
-              satu nyawa per ronde, kamu harus berpikir lebih cepat daripada
-              lawan jika ingin tetap hidup. Habisi musuh baik di mode
-              Competitive maupun Unranked serta Deathmatch dan Spike Rush.
+              Blend your style and experience on a global, competitive stage.
+              You have 13 rounds to attack and defend your side using sharp
+              gunplay and tactical abilities. And, with one life per-round,
+              you&apos;ll need to think faster than your opponent if you want to
+              survive. Take on foes across Competitive and Unranked modes as
+              well as Deathmatch and Spike Rush.
             </p>
           </div>
           {/* VIDEO CONTENT */}
-          <div className="w-full h-full relative gameplay-vid p-8">
+          <div className="xl:w-1/2 h-full relative gameplay-vid ">
             <video
               preload="true"
               loading="lazy"
