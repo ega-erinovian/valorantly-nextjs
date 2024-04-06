@@ -15,7 +15,9 @@ export async function generateStaticParams() {
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/agents`
   ).then((res) => res.json());
 
-  return data.map((item) => ({ agentId: item.uuid }));
+  return data.map((item) => {
+    if (item.isPlayableCharacter) return { agentId: item.uuid };
+  });
 }
 
 const AgentsDetail = async ({ params: { agentId } }) => {
