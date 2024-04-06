@@ -36,7 +36,7 @@ const HomeContent = ({ title, subtitle, description }) => {
               : "text-color-white bg-color-primary before:bg-color-secondary"
           }  hover:text-color-white`}
         >
-          <span class="relative uppercase font-bold text-sm lg:text-md">
+          <span className="relative uppercase font-bold text-sm lg:text-md">
             See All {title}
           </span>
         </button>

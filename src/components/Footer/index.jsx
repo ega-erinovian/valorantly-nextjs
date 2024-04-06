@@ -35,6 +35,7 @@ const Footer = () => {
               key={index}
               href={item.link}
               className="rounded-full bg-color-lightSecondary hover:bg-color-lighterSecondary p-1"
+              target="_blank"
             >
               {item.logo}
             </Link>

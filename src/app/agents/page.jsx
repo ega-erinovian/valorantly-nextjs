@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Oswald } from "next/font/google";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import SelectAgent from "@/components/SelectAgent";
-import AgentHeader from "@/components/AgentHeader";
+import AgentHeader from "@/components/AgentDetail/AgentHeader";
 
 const oswald = Oswald({ subsets: ["latin"] });
 

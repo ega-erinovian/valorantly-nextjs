@@ -118,7 +118,7 @@ export default function Home() {
             </clipPath>
           </defs>
         </svg>
-        <div className="w-fit h-full lg:h-[80%] bg-color-primary lg:flex items-center justify-end relative py-20 lg:py-0">
+        <div className="w-full h-full lg:h-[80%] bg-color-primary lg:flex items-center justify-end relative py-20 lg:py-0">
           <motion.h1
             className="font-black text-[270px] absolute top-[-10rem] left-5 hidden lg:block drop-shadow-[0_0_2px_#c43a45] text-color-primary"
             style={{ y: yWar }}

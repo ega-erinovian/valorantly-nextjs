@@ -52,10 +52,10 @@ const SelectAgent = ({ link = "", agentName }) => {
                   <Link
                     href={`/agents/${agent.uuid}`}
                     key={i}
-                    className={`border-2 border-stone-400 p-0 w-fit hover:bg-stone-300 transition-all ${
+                    className={`border-2 border-stone-400 p-0 w-fit transition-all ${
                       link !== "" && agent.uuid === link
                         ? "bg-stone-300 border-color-primary cursor-default"
-                        : ""
+                        : "hover:bg-stone-300"
                     }`}
                   >
                     <Image
