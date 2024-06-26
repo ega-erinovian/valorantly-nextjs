@@ -78,6 +78,7 @@ const Navbar = () => {
       <div className="lg:flex">
         <Link href="/">
           <Image
+            unoptimized
             src="/assets/logo.webp"
             width={50}
             height={50}

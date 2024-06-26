@@ -114,6 +114,7 @@ const AgentHeader = ({
             <p className="font-bold text-md mb-2"># Role</p>
             <div className="w-full flex items-center gap-4">
               <Image
+                unoptimized
                 src={roleIcon}
                 width={30}
                 height={30}

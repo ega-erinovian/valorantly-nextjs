@@ -64,6 +64,7 @@ const SelectAgent = ({ link = "", agentName }) => {
                           ? "brightness-[40%]"
                           : ""
                       } `}
+                      unoptimized
                       src={agent.displayIcon}
                       alt={agent.displayName}
                       key={i}

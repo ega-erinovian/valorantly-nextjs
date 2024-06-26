@@ -32,6 +32,7 @@ const AgentSkill = ({ data, agentIndex }) => {
                       onClick={() => setSkill(index)}
                     >
                       <Image
+                        unoptimized
                         src={ability.displayIcon}
                         width={45}
                         height={45}

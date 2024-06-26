@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // output: "export",
   images: {
     remotePatterns: [
       {
@@ -10,6 +10,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "media.valorant-api.com",
+      },
+      {
+        protocol: "https",
+        hostname: "playvalorant.com",
       },
     ],
   },

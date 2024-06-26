@@ -131,7 +131,7 @@ export default function Home() {
           >
             <Image
               unoptimized
-              src="https://playvalorant.com/static/agents-group-31d7ce5a3637e45d8b25d2fd03159e6c.png"
+              src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/1d62a3751be9d7abfce84da8ca89be7d79f07fed-1232x1232.png?auto=format&fit=fill&q=80&w=728"
               width={1000}
               height={1000}
               alt="valorant-agents"
@@ -166,6 +166,7 @@ export default function Home() {
         </div>
         {/* MAP IMAGE */}
         <Image
+          unoptimized
           src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt02c83424f7b41a97/6243813d8850ee0e8ea0ae56/maps-03ebbf2c074f13a65af1dba0c80f767e.png"
           width={900}
           height={880}
